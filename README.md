@@ -49,13 +49,13 @@ Utilize BeautifulSoup to parse the HTML content retrieved.
 
 soup = BeautifulSoup(html_content, 'html.parser')
 
-###Step 7: Data Extraction
+### Step 7: Data Extraction
 Locate the table in the HTML and extract relevant data from each row.
 
 table = soup.find('table', {'class': 'wikitable'})
 data = []
-for row in table.find_all('tr'):
-    cols = row.find_all('td')
+for row in table.find_all('tr'): \
+    cols = row.find_all('td') \
     if cols:
         data.append({
             'Rank': cols[0].text.strip(),
