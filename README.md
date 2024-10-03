@@ -56,16 +56,16 @@ table = soup.find('table', {'class': 'wikitable'})
 data = []
 for row in table.find_all('tr'): \
     cols = row.find_all('td') \
-    if cols:
-        data.append({
-            'Rank': cols[0].text.strip(),
-            'Name': cols[1].text.strip(),
-            'Industry': cols[2].text.strip(),
-            'Revenue (USD billion)': cols[3].text.strip(),
-            'Fiscal Year': cols[4].text.strip(),
-            'Employees': cols[5].text.strip(),
-            'Headquarters': cols[6].text.strip(),
-        })
+    if cols:\
+        data.append({\
+            'Rank': cols[0].text.strip(),\
+            'Name': cols[1].text.strip(),\
+            'Industry': cols[2].text.strip(),\
+            'Revenue (USD billion)': cols[3].text.strip(),\
+            'Fiscal Year': cols[4].text.strip(),\
+            'Employees': cols[5].text.strip(),\
+            'Headquarters': cols[6].text.strip(),\
+        })\
 ### Step 8: Save Data
 Convert the extracted data into a pandas DataFrame and then export it to a CSV file.
 
