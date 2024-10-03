@@ -65,7 +65,7 @@ for row in table.find_all('tr'): \
             'Fiscal Year': cols[4].text.strip(),\
             'Employees': cols[5].text.strip(),\
             'Headquarters': cols[6].text.strip(),\
-        })\
+        })
 ### Step 8: Save Data
 Convert the extracted data into a pandas DataFrame and then export it to a CSV file.
 
